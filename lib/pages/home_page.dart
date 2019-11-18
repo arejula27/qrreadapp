@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qrreadapp/pages/direcciones_page.dart';
 import 'package:qrreadapp/pages/mapas_page.dart';
+import 'package:qrcode_reader/qrcode_reader.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -30,7 +31,9 @@ class _HomePageState extends State<HomePage> {
         bottomNavigationBar: _bottonNavigationBar(),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
-          onPressed: (){},
+          onPressed: (){
+            _scanQR();
+          },
           child: Icon(Icons.filter_center_focus ),
           backgroundColor: Theme.of(context).primaryColor,
         ),
@@ -69,5 +72,9 @@ class _HomePageState extends State<HomePage> {
         return MapasPage();
 
     }
+  }
+
+  void _scanQR() {
+    print("scan");
   }
 }
