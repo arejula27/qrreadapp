@@ -15,6 +15,18 @@ class MyApp extends StatelessWidget {
           'home':(BuildContext context)=>HomePage(),
 
       },
+      //centralizar el tema
+      //ctrl+space para ver todas las opciones
+      theme: ThemeData(
+        
+
+        primaryColor: Colors.black,
+        appBarTheme: AppBarTheme(
+          color: Color.fromRGBO(42, 42, 42, 1.0)
+
+        )
+        
+      ),
     );
   }
 }

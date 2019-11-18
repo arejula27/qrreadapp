@@ -15,8 +15,25 @@ class _HomePageState extends State<HomePage> {
     
     return Container(
       child: Scaffold(
+        appBar: AppBar(
+          title: Text("QR Scanner"),
+          actions: <Widget>[
+            IconButton(
+              
+              onPressed:(){},
+              icon: Icon(
+                Icons.delete_forever),
+            )
+          ],
+        ),
         body: _callPage(_ind),
         bottomNavigationBar: _bottonNavigationBar(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){},
+          child: Icon(Icons.filter_center_focus ),
+          backgroundColor: Theme.of(context).primaryColor,
+        ),
       ),
     );
   }
