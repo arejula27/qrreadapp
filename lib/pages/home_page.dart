@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:qrcode_reader/qrcode_reader.dart';
 import 'package:qrreadapp/pages/direcciones_page.dart';
 import 'package:qrreadapp/pages/mapas_page.dart';
+import 'dart:developer';
 //import 'package:qrcode_reader/qrcode_reader.dart';
 
 class HomePage extends StatefulWidget {
@@ -72,7 +74,23 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-_scanQR() {
-    print("scan");
-  }
+  _scanQR() async{
+      // https://fernando-herrera.com
+      // geo:40.724233047051705,-74.00731459101564
+
+      // String futureString = '';
+      String futureString;
+
+      try {
+       futureString = await new QRCodeReader().scan();
+      } catch(e) {
+       futureString = e.toString();
+      }
+      log("$futureString");
+     if ( futureString != null ) {
+
+       log("Encontrado");
+
+    }
+}
 }
