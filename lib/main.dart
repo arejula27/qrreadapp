@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qrreadapp/pages/home_page.dart';
+import 'package:qrreadapp/src/pages/home_page.dart';
  
 void main() => runApp(MyApp());
  

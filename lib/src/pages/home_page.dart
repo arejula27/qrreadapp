@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qrcode_reader/qrcode_reader.dart';
-import 'package:qrreadapp/pages/direcciones_page.dart';
-import 'package:qrreadapp/pages/mapas_page.dart';
+import 'package:qrreadapp/src/pages/direcciones_page.dart';
+import 'package:qrreadapp/src/pages/mapas_page.dart';
 import 'dart:developer';
 //import 'package:qrcode_reader/qrcode_reader.dart';
 
